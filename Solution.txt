@@ -1,0 +1,103 @@
+1) Create a local repository 
+
+mkdir maariaK
+
+cd maariaK
+
+git init
+
+2) 3 files into it
+
+notepad Sample.java
+cat Sample.java
+
+notepad First.java
+cat First.java
+
+notepad Passion.java
+cat Second.java
+
+notepad Location.java
+cat Third.java
+
+
+3) Staging and committing sample file on master to let the git branch command work 
+
+git add Sample.java
+
+git commit -m "Initial commit"
+
+git branch 
+
+4) Creating and switching to Dev branch- Staging and committing location file
+
+git checkout -b Dev
+
+git add Third.java
+
+git commit -m "Commit Third Program"
+
+git status
+
+git log
+
+5) Creating and switching to Dev branch- Staging and committing First and Second file
+
+git checkout -b Test
+
+git add First.java
+
+git commit -m "Commit First Program"
+
+git add Second.java
+
+git commit -m "Commit Assignment"
+
+git status
+
+git log
+
+6) Switching to master - merging Dev and Test branch with master since master is the one which is to be deployed.
+
+git checkout master
+
+git merge Dev Test
+
+git log 
+
+git status
+
+7) Pushing Repository on github
+
+git remote add origin https://github.com/ravipilgar/GitAssignment.git
+
+git remote -v
+
+git config --global user.name "ravipilgar"
+
+git config --global user.email "ravi.pilgar@gmail.com"
+
+git push -u origin master
+
+8) Create a clone for this repo from github to local system with another location.
+
+cd ..
+
+git clone https://github.com/ravipilgar/GitAssignment.git
+
+9) Create a new file as Solution.txt in this cloned repository.
+
+cd '/c/Users/ravikiran/GitAssignment'
+
+notepad Solution.txt
+
+cat Solution.txt
+
+git add Solution.txt
+
+git commit -m "Done commit on Solution.txt"
+
+10) Push the changes to github again in same repository.
+
+git push -u origin master
+
